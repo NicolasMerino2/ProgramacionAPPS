@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle | titlecase }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido/a a TeLlevoApp</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{mensaje}}
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

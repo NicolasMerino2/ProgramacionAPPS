@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ pageTitle | titlecase }}</ion-title>
+    <img class="img-logo" src="../../../assets/img/logo_starwars.png" alt="">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar animated="true" placeholder="Buscar..." (ionChange)="buscar($event)"></ion-searchbar>
+  <ion-list lines="full" *ngIf="listaPersonajes">
+    <ion-item *ngFor="let personaje of listaPersonajes | filtroPersonajes: busqueda">
+      <ion-avatar slot="start">
+        <img [src]="personaje.image" alt="{{personaje.name}}">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{personaje.name}}</h2>
+        <h3>{{personaje.homeworld | titlecase}}</h3>
+      </ion-label>
+      <ion-icon class="ff" name="arrow-forward" (click)="goToDetail(personaje)"></ion-icon>
+    </ion-item>    
+  </ion-list>
+</ion-content>
