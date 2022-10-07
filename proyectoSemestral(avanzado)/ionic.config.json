@@ -1,7 +1,0 @@
-{
-  "name": "proyecto-starwars",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
